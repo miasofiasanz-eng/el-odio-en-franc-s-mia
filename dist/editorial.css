@@ -32,4 +32,7 @@ img.mouth-arrow-handmark{width:19%;height:auto;right:3%;bottom:19%;transform:rot
 img.portrait-handmark{width:20%;height:auto;right:8%;top:26%;transform:rotate(7deg)}
 img.bridge-handmark{position:relative;width:130px;height:auto;margin-top:-8px;align-self:center;transform:rotate(35deg)}
 .scroll-bridge p::after{display:none}
+/* Presencia visual de las plataformas; los enlaces se incorporarán más adelante. */
+.band-social{display:flex;align-items:center;justify-content:center;gap:30px;min-height:96px;padding:28px 5%;color:var(--ink);background:var(--surface,#0b0b0b)}
+.band-social-icon{display:block;width:25px;height:25px;flex:none}
 @media(max-width:760px){img.hero-handmark{width:28%;right:5%;top:51%;opacity:.8}img.portrait-handmark{width:25%;top:18%;right:7%;opacity:.8}img.mouth-handmark{width:17%;left:7%;top:12%}img.mouth-arrow-handmark{width:16%;right:8%;bottom:14%}img.bridge-handmark{width:100px}}
