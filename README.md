@@ -16,7 +16,7 @@ Hacer mi retrato abre una pantalla con visor 16:9, vista original pequeña, pale
 
 ## Grafismos y deformación
 
-Los trazos complementarios de handmarks.js son nuevos para la web, inspirados en los afiches aplanados de Figma; no son extracciones de esos originales. Se aplican sobre las fotos y en el puente entre secciones.
+Los grafismos de handmarks.js usan los doodles originales provistos en “Material/texturas para web”, copiados sin modificaciones a dist/assets/doodles/. Se aplican sobre las fotos y en el puente entre secciones. Los trazos negros se muestran en claro mediante CSS sobre el fondo oscuro. La carpeta conserva los 14 PNG originales para futuras composiciones.
 
 La cámara usa displacement.js para deformar los píxeles con ondas, refracción acanalada y un desgarro móvil. El control Deformación regula la amplitud; cursor y toque desplazan el centro del campo. Ceniza es el tratamiento inicial y Térmico sigue disponible. Probar con una foto usa la imagen de retrato del proyecto, sin acceder a la webcam. Congelar detiene también la deformación y el PNG conserva el tratamiento.
 

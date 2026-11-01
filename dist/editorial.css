@@ -24,11 +24,12 @@
 #portrait-canvas{cursor:crosshair;touch-action:pan-y}
 
 
-/* Rayones y contornos abiertos: intervención manual sobre las fotos. */
-.handmark{position:absolute;pointer-events:none;overflow:visible;z-index:3;opacity:.8;mix-blend-mode:screen}
-.hero-handmark{width:22%;height:70%;right:16%;top:12%;transform:rotate(-6deg)}
-.mouth-handmark{width:110%;height:80%;left:-5%;top:10%;opacity:.8}
-.portrait-handmark{width:20%;height:52%;right:8%;top:25%;transform:rotate(7deg)}
-.bridge-handmark{position:relative;width:155px;height:60px;margin-top:-8px;align-self:center}
+/* Doodles originales: tinta negra invertida sobre la superficie oscura. */
+img.handmark{position:absolute;pointer-events:none;z-index:3;display:block;object-fit:contain;max-width:none;max-height:none;opacity:.85;filter:invert(1);mix-blend-mode:screen;mask-image:none;-webkit-mask-image:none;user-select:none}
+img.hero-handmark{width:22%;height:auto;right:10%;top:22%;transform:rotate(-6deg)}
+img.mouth-handmark{width:19%;height:auto;left:3%;top:18%;transform:rotate(-12deg)}
+img.mouth-arrow-handmark{width:19%;height:auto;right:3%;bottom:19%;transform:rotate(12deg)}
+img.portrait-handmark{width:20%;height:auto;right:8%;top:26%;transform:rotate(7deg)}
+img.bridge-handmark{position:relative;width:130px;height:auto;margin-top:-8px;align-self:center;transform:rotate(35deg)}
 .scroll-bridge p::after{display:none}
-@media(max-width:760px){.hero-handmark{width:42%;height:67%;right:3%;top:15%;opacity:.7}.portrait-handmark{width:32%;height:38%;top:26%;right:5%;opacity:.65}.mouth-handmark{height:100%;top:0}.bridge-handmark{width:130px;height:50px}}
+@media(max-width:760px){img.hero-handmark{width:28%;right:5%;top:51%;opacity:.8}img.portrait-handmark{width:25%;top:18%;right:7%;opacity:.8}img.mouth-handmark{width:17%;left:7%;top:12%}img.mouth-arrow-handmark{width:16%;right:8%;bottom:14%}img.bridge-handmark{width:100px}}
