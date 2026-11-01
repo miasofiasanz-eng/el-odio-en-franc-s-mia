@@ -17,6 +17,9 @@
 .ticket-art>span{position:absolute;right:12px;bottom:12px;background:#0e0e0de8;color:#f0ebde;padding:10px 12px;font:9px 'Courier New',monospace}
 .ticket-art:hover>span,.ticket-art:focus-visible>span{background:var(--acid)}
 .ticket-bottom{align-items:center;border-top:1px dashed #0e0e0d}
+.ticket-face-controls{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:12px 15px;font:9px/1.5 'Courier New',monospace;border-top:1px solid #0e0e0d}
+.ticket-face-controls button{color:#0e0e0d;font:inherit;padding:7px 10px;border:1px solid #0e0e0d}
+.ticket-face-controls button:hover{background:#0e0e0d;color:#f0ebde}
 .ticket-sale{font-size:8px;border:1px solid #8b8379;padding:10px}
 .tickets-note{display:flex;justify-content:space-between;gap:25px;padding-top:25px;font:9px/1.6 'Courier New',monospace}
 .tickets-note p{margin:0;color:var(--muted)}
@@ -25,6 +28,7 @@
 .ticket-dialog-top{padding-bottom:15px}.ticket-dialog-top h3{margin:0;font:10px/1.5 'Courier New',monospace}.ticket-dialog-top button{font-size:26px}
 .ticket-expanded{display:block;width:100%;height:auto;max-height:70svh;object-fit:contain}
 .ticket-dialog-bottom{padding-top:15px;font:10px 'Courier New',monospace}.ticket-dialog-bottom button{font-size:24px;padding:8px 15px}
+.ticket-dialog-bottom [data-ticket-dialog-flip]{font:10px 'Courier New',monospace;border:1px solid #7a7369;padding:12px}
 @media(max-width:760px){.merch-subnav{margin:0 5%;font-size:8px;gap:15px}.tickets{padding:45px 5% 25px;scroll-margin-top:85px}.tickets-heading{display:block}.tickets-heading>p{font-size:12px;margin-top:25px}.tickets-grid{grid-template-columns:1fr;gap:20px}.ticket-top,.ticket-bottom{font-size:8px;padding:12px}.tickets-note{display:block;font-size:8px}.tickets-note p{margin-top:12px}.ticket-dialog{padding:15px}}
 .merch-heading{display:flex;justify-content:space-between;gap:40px;align-items:center;margin-bottom:30px}
 .merch-heading .eyebrow{font:11px/1.4 'Courier New',monospace;margin-bottom:18px}
