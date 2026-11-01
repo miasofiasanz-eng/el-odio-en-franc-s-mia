@@ -39,6 +39,14 @@
 .merch-original{width:100%;min-width:0;display:grid;place-items:center}
 .merch-original img{display:block;width:auto;max-width:100%;height:auto;max-height:560px;object-fit:contain}
 .merch-original.is-disc img{border-radius:50%;aspect-ratio:1;object-fit:contain}
+[data-disc]{cursor:grab;touch-action:none;user-select:none;outline-offset:8px}
+[data-disc].is-turning{cursor:grabbing}
+[data-disc]:focus-visible{outline:2px solid var(--merch-black)}
+[data-disc] img{pointer-events:none;user-select:none;-webkit-user-drag:none;transform-origin:center}
+.disc-controls{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;font:8px/1.6 'Courier New',monospace}
+.disc-controls>div{display:flex;align-items:center;gap:12px}
+.disc-controls button{color:var(--merch-black);border:1px solid var(--merch-black);padding:8px 12px;font:10px 'Courier New',monospace}
+.disc-controls button:first-child,.disc-controls button:last-child{font-size:21px;padding:3px 12px}
 .merch-thumbnail .merch-original{height:100%}
 .merch-thumbnail .merch-original img{height:100%;max-height:106px;width:auto;max-width:100%;object-fit:contain}
 .tone-dark .merch-print img{filter:invert(1)}
