@@ -10,7 +10,7 @@ La red de modales incluye introducción, escritura, voces, confirmación, retrat
 
 ## Cámara en vivo
 
-Hacer mi retrato abre una pantalla con visor 16:9, vista original pequeña, paletas térmica y ceniza, contraste y grano. Prender cámara solicita acceso únicamente a video. El procesamiento sucede en Canvas dentro del navegador; las imágenes no se suben. Se puede congelar y guardar un PNG. Cerrar la pantalla, cambiar de modal o dejar la pestaña apaga la cámara. Se muestra una composición tipográfica mientras está apagada. El efecto responde al brillo, no mide temperatura.
+Hacer mi retrato abre una pantalla con visor 16:9, vista original pequeña, modos Ceniza y Bronca, contraste y grano. Prender cámara solicita acceso únicamente a video. El procesamiento sucede en Canvas dentro del navegador; las imágenes no se suben. Se puede congelar y guardar un PNG. Cerrar la pantalla, cambiar de modal o dejar la pestaña apaga la cámara. Se muestra una composición tipográfica mientras está apagada. El Modo bronca suma una malla de deformación y grafismos originales en blanco, negro y rojo; el efecto se ubica al centrar el rostro o mover el cursor/tocar el visor. No realiza seguimiento facial automático.
 
 
 
@@ -18,7 +18,7 @@ Hacer mi retrato abre una pantalla con visor 16:9, vista original pequeña, pale
 
 Los grafismos de handmarks.js usan los doodles originales provistos en “Material/texturas para web”, copiados sin modificaciones a dist/assets/doodles/. Se aplican sobre las fotos y en el puente entre secciones. Los trazos negros se muestran en claro mediante CSS sobre el fondo oscuro. La carpeta conserva los 14 PNG originales para futuras composiciones.
 
-La cámara usa displacement.js para deformar los píxeles con ondas, refracción acanalada y un desgarro móvil. El control Deformación regula la amplitud; cursor y toque desplazan el centro del campo. Ceniza es el tratamiento inicial y Térmico sigue disponible. Probar con una foto usa la imagen de retrato del proyecto, sin acceder a la webcam. Congelar detiene también la deformación y el PNG conserva el tratamiento.
+La cámara usa displacement.js para deformar los píxeles con ondas, refracción acanalada y un desgarro móvil. El control Deformación regula la amplitud; cursor y toque desplazan el centro del campo. Ceniza es el tratamiento inicial y Modo bronca usa una malla de deformación localizada y los doodles originales. Probar con una foto usa la imagen de retrato del proyecto, sin acceder a la webcam. Congelar detiene también la deformación y el PNG conserva el tratamiento.
 
 
 ## Red nodal local

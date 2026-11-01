@@ -59,7 +59,7 @@ dialog.camera-mode{position:fixed;inset:0;width:100%;height:100%;max-width:none;
 .palette-buttons button{flex:1;border:1px solid #474747;padding:12px 8px;display:flex;align-items:center;gap:8px;font-size:9px}
 .palette-buttons button[aria-pressed=true]{border-color:#d0d0d0;background:#2a2a2a}
 .palette-buttons i{width:15px;height:15px;display:block;flex:none}
-.thermal-swatch{background:linear-gradient(135deg,#28105e,#d1569c,#ffba99)}
+.bronca-swatch{background:repeating-linear-gradient(0deg,transparent 0 4px,#ed3529 4px 5px),repeating-linear-gradient(90deg,#111 0 4px,#ed3529 4px 5px)}
 .ash-swatch{background:linear-gradient(135deg,#2a2a2a,#eeeeee)}
 .camera-control-group input{display:block;width:100%;accent-color:#c7c7c7;margin:18px 0 0;cursor:pointer}
 .camera-controls .camera-note{font-size:10px;line-height:1.6;color:#949494;margin:0 0 25px}
