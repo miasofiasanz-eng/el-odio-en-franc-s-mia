@@ -5,7 +5,7 @@
   const products = [
     {id:'odio', type:'Remeras', name:'EL ODIO', lines:'EL ODIO<br>EN FRANCÉS.', shape:'shirt', tone:'dark', graphic:1, detail:'Una estampa al frente. Todo lo que llevás adentro, también afuera.'},
     {id:'fuerza', type:'Remeras', name:'LA BRONCA ES FUERZA', lines:'LA BRONCA<br>ES FUERZA.', shape:'shirt', tone:'paper', graphic:2, detail:'La bronca se comparte. Una gráfica de la banda para llevar puesta.'},
-    {id:'aguantar', type:'Accesorios', name:'NO NACÍ PARA AGUANTAR', lines:'NO NACÍ<br>PARA<br>AGUANTAR.', shape:'tote', tone:'paper', detail:'Las palabras salen a la calle. Una propuesta de estampa para tote.'},
+    {id:'naipes', type:'Accesorios', name:'NAIPES / EL ODIO', image:'assets/merch/naipes-y-sobre.png', width:1898, height:1261, alt:'Conjunto original de naipes intervenidos de El odio en francés junto al frente y reverso de su sobre.', detail:'El juego también se interviene. Naipes de la banda y su sobre, en una misma pieza.'},
     {id:'futuro', type:'Afiches', name:'EL ODIO EN FRANCÉS', image:'assets/merch/afiche-el-odio.png', alt:'Afiche original de El odio en francés: figura intervenida con tramas, grafismos y la frase La bronca compartida es fuerza.', detail:'Afiche original de la banda. La bronca compartida es fuerza.'},
     {id:'eco', type:'Afiches', name:'¿QUÉ ES LO QUE TE CONSUME?', image:'assets/merch/afiche-que-te-consume.png', alt:'Afiche original con un torso abierto por una franja roja e hilos y la pregunta ¿Qué es lo que te consume?', detail:'Afiche original de la banda. Dejá que brote tu oscuridad.'},
     {id:'miradas', type:'Accesorios', name:'OTRAS MIRADAS', lines:'OTRAS<br>MIRADAS.', shape:'stickers', tone:'paper', graphic:5, detail:'Ojos, trazos y señales. Los doodles originales como propuesta de stickers.'},
@@ -15,7 +15,7 @@
   const item=()=>products.find(p=>p.id===selected);
   const number=p=>String(products.indexOf(p)+1).padStart(2,'0');
   function art(p,large=false){
-    if(p.image)return `<div class="merch-original"><img src="${p.image}" alt="${large?p.alt:''}" ${large?'':'aria-hidden="true"'} decoding="async" width="${p.id==='futuro'?1014:1013}" height="1434"></div>`;
+    if(p.image)return `<div class="merch-original"><img src="${p.image}" alt="${large?p.alt:''}" ${large?'':'aria-hidden="true"'} decoding="async" width="${p.width||(p.id==='futuro'?1014:1013)}" height="${p.height||1434}"></div>`;
     return `<div class="merch-object ${printOnly&&large?'print':p.shape} tone-${p.tone}"><div class="merch-print">${p.graphic?`<img src="assets/doodles/grafismo-${p.graphic}.png" alt="" aria-hidden="true" decoding="async">`:`<strong>${p.lines}</strong>`}<span>EL ODIO EN FRANCÉS</span></div></div>`;
   }
   function render(){
