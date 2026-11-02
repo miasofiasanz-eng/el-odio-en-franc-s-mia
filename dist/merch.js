@@ -10,11 +10,12 @@
     {id:'eco', type:'Afiches', name:'¿QUÉ ES LO QUE TE CONSUME?', image:'assets/merch/afiche-que-te-consume.png', alt:'Afiche original con un torso abierto por una franja roja e hilos y la pregunta ¿Qué es lo que te consume?', detail:'Afiche original de la banda. Dejá que brote tu oscuridad.'},
     {id:'romperla', type:'Discos', name:'CD / A ROMPERLA TODA', image:'assets/merch/cd-a-romperla-toda.jpg', width:1334, height:1328, format:'disc', cover:'assets/merch/tapa-disco.svg', alt:'CD plateado intervenido con grietas negras y las frases A romperla toda y El odio en rojo.', detail:'A romperla toda. CD de la banda con su tapa incluida. Explorá las dos vistas.'},
   ];
-  let category='Todos', selected='futuro', printOnly=false, discView='disc', discAngle=0, discDrag=null;
+  let category='Todos', selected='futuro', printOnly=false, discView='cover', discAngle=0, discDrag=null;
   const filtered=()=>products.filter(p=>category==='Todos'||p.type===category);
   const item=()=>products.find(p=>p.id===selected);
   const number=p=>String(products.indexOf(p)+1).padStart(2,'0');
   function art(p,large=false){
+    if(!large&&p.cover)p={...p,image:p.cover,width:825,height:720,format:"cover"};
     if(p.image)return `<div class="merch-original ${p.format==='disc'?'is-disc':''}" ${large&&p.format==='disc'?'data-disc tabindex="0" role="slider" aria-label="Girar CD" aria-valuemin="0" aria-valuemax="359" aria-describedby="disc-help"':''}><img src="${p.image}" alt="${large?p.alt:''}" ${large?'':'aria-hidden="true"'} decoding="async" width="${p.width||(p.id==='futuro'?1014:1013)}" height="${p.height||1434}"></div>`;
     return `<div class="merch-object ${printOnly&&large?'print':p.shape} tone-${p.tone}"><div class="merch-print">${p.graphic?`<img src="assets/doodles/grafismo-${p.graphic}.png" alt="" aria-hidden="true" decoding="async">`:`<strong>${p.lines}</strong>`}<span>EL ODIO EN FRANCÉS</span></div></div>`;
   }
@@ -35,9 +36,9 @@
     if(!button)return;
     if(button.dataset.merchVariant){discView=button.dataset.merchVariant;render();host.querySelector(`[data-merch-variant="${discView}"]`)?.focus({preventScroll:true});return;}
     if(button.dataset.discAction){discAngle=button.dataset.discAction==='reset'?0:discAngle+(button.dataset.discAction==='left'?-15:15);updateDisc();return;}
-    if(button.dataset.merchFilter){discView='disc';category=button.dataset.merchFilter;if(!filtered().some(p=>p.id===selected))selected=filtered()[0].id;}
-    else if(button.dataset.merchProduct){selected=button.dataset.merchProduct;discView='disc';}
-    else if(button.dataset.merchStep){discView='disc';const list=filtered();selected=list[(list.findIndex(p=>p.id===selected)+Number(button.dataset.merchStep)+list.length)%list.length].id;}
+    if(button.dataset.merchFilter){discView='cover';category=button.dataset.merchFilter;if(!filtered().some(p=>p.id===selected))selected=filtered()[0].id;}
+    else if(button.dataset.merchProduct){selected=button.dataset.merchProduct;discView='cover';}
+    else if(button.dataset.merchStep){discView='cover';const list=filtered();selected=list[(list.findIndex(p=>p.id===selected)+Number(button.dataset.merchStep)+list.length)%list.length].id;}
     else if(button.hasAttribute('data-merch-toggle'))printOnly=!printOnly;
     else return;
     const focusKey=button.dataset.merchFilter?`[data-merch-filter="${category}"]`:button.dataset.merchProduct?`[data-merch-product="${selected}"]`:button.dataset.merchStep?`[data-merch-step="${button.dataset.merchStep}"]`:'[data-merch-toggle]';

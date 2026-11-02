@@ -18,7 +18,7 @@
   function catalog(){
     const list=templates.filter(t=>category==='Todos'||t.category===category),pages=Math.ceil(list.length/9);
     page=Math.min(page,pages-1);
-    host.innerHTML=`<div class="editions-heading"><div><p class="eyebrow">04 / DE LA PANTALLA A LA CALLE</p><h2>Tus ediciones.</h2></div><p>Elegí una plantilla. Cruzá palabras y grafismos.<br>Imprimí tu edición y llevala al evento.</p></div>
+    host.innerHTML=`<div class="editions-heading"><div><p class="eyebrow">04 / DE LA PANTALLA A LA CALLE</p><h2>Tus ediciones</h2></div><p>Elegí una plantilla. Cruzá palabras y grafismos.<br>Imprimí tu edición y llevala al evento.</p></div>
       <div class="edition-path"><span><b>01</b> ELEGÍ</span><span><b>02</b> COMBINÁ</span><span><b>03</b> IMPRIMÍ E INTERVENÍ</span></div>
       <div class="editions-catalog"><aside class="edition-sidebar"><h3>Stencils</h3><div class="edition-filter-list" role="group" aria-label="Filtrar stencils">${['Todos','Palabras','Símbolos'].map(c=>`<button type="button" data-ed-filter="${c}" aria-pressed="${category===c}">${c.toUpperCase()}</button>`).join('')}</div><button class="edition-start" type="button" data-ed-new>+ CREAR DESDE CERO ↗</button><button class="edition-start" type="button" data-ed-resume>CONTINUAR BORRADOR ↗</button></aside>
       <div class="edition-template-grid">${list.slice(page*9,page*9+9).map(t=>`<button type="button" class="edition-template" data-ed-apply="${t.id}" aria-label="Aplicar stencil ${esc(t.name)}"><small>${String(t.id).padStart(2,'0')}</small><img src="${t.src}" alt="" loading="lazy" decoding="async"><strong>${esc(t.name)}</strong><span>APLICAR ↗</span></button>`).join('')}</div></div>
