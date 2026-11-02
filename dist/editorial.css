@@ -42,3 +42,8 @@ img.bridge-handmark{position:relative;width:130px;height:auto;margin-top:-8px;al
 .header .brand{display:block;flex-shrink:0}
 .header .brand-logo{display:block;width:140px;height:auto}
 @media(max-width:760px){.header .brand-logo{width:105px}}
+
+/* Lettering original de CÓMO TE VES, conservado como PNG transparente. */
+.portrait h2.portrait-brush-title{width:min(100%,1000px);margin:20px 0 0 -2%;font-size:0;line-height:0;filter:none}
+.portrait-brush-title img{display:block;width:100%;height:auto;filter:invert(1);opacity:.95}
+@media(max-width:760px){.portrait h2.portrait-brush-title{width:110%;max-width:none;margin:80px 0 0 -5%}}

@@ -27,6 +27,6 @@ Explorar la red abre un mapa de pantalla completa que se recorre arrastrando con
 
 Crear mi nodo permite escribir una descarga, recibir una sugerencia de tópico y ver las palabras normalizadas antes de guardar. Los términos se agrupan por raíces y sinónimos definidos en network-core.js: por ejemplo cansancio, agotamiento y desgaste se vinculan como desgaste. Las conexiones tienen una regla explícita y no implican análisis semántico por IA.
 
-El constructor de pensamientos cruza tópicos y hasta tres palabras. Muestra cuántos registros y tópicos respaldan cada palabra, conserva las fuentes y propone una frase editable. No atribuye una palabra a un tópico si sus registros no la contienen. Los pensamientos se recuperan desde Mis pensamientos y pueden descargarse como texto. El diseño de stencils queda para una sesión posterior.
+Se retiró el constructor de pensamientos y sus accesos desde el mapa. Mis pensamientos permite consultar los textos guardados previamente en este navegador; no se borraron los datos existentes.
 
 Hay 14 registros de ejemplo claramente identificados. Los nodos propios y pensamientos se almacenan en este navegador, con topes de 60 y 30 respectivamente; no se comparten entre dispositivos ni personas. La comunidad en línea necesita almacenamiento compartido al publicar.
