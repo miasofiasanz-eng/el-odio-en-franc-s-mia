@@ -36,3 +36,9 @@ img.bridge-handmark{position:relative;width:130px;height:auto;margin-top:-8px;al
 .band-social{display:flex;align-items:center;justify-content:center;gap:30px;min-height:96px;padding:28px 5%;color:var(--ink);background:var(--surface,#0b0b0b)}
 .band-social-icon{display:block;width:25px;height:25px;flex:none}
 @media(max-width:760px){img.hero-handmark{width:28%;right:5%;top:51%;opacity:.8}img.portrait-handmark{width:25%;top:18%;right:7%;opacity:.8}img.mouth-handmark{width:17%;left:7%;top:12%}img.mouth-arrow-handmark{width:16%;right:8%;bottom:14%}img.bridge-handmark{width:100px}}
+
+
+/* Logo brush original, encuadrado sin los márgenes transparentes. */
+.header .brand{display:block;flex-shrink:0}
+.header .brand-logo{display:block;width:140px;height:auto}
+@media(max-width:760px){.header .brand-logo{width:105px}}
