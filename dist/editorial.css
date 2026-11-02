@@ -47,3 +47,8 @@ img.bridge-handmark{position:relative;width:130px;height:auto;margin-top:-8px;al
 .portrait h2.portrait-brush-title{width:min(100%,1000px);margin:20px 0 0 -2%;font-size:0;line-height:0;filter:none}
 .portrait-brush-title img{display:block;width:100%;height:auto;filter:invert(1);opacity:.95}
 @media(max-width:760px){.portrait h2.portrait-brush-title{width:110%;max-width:none;margin:80px 0 0 -5%}}
+
+@media(max-width:760px){.header .brand-logo{width:82px}.header nav{gap:9px}.header nav a{font-size:7px;letter-spacing:0}}
+
+.header nav{gap:clamp(12px,2.5vw,42px)}
+@media(max-width:760px){.header nav{display:grid;grid-template-columns:repeat(2,max-content);gap:6px 14px}.header .menu-link span{margin-left:0}.header nav a{font-size:7px;line-height:1.3}}
