@@ -9,7 +9,6 @@
     {id:'futuro', type:'Afiches', name:'EL ODIO EN FRANCÉS', image:'assets/merch/afiche-el-odio.png', alt:'Afiche original de El odio en francés: figura intervenida con tramas, grafismos y la frase La bronca compartida es fuerza.', detail:'Afiche original de la banda. La bronca compartida es fuerza.'},
     {id:'eco', type:'Afiches', name:'¿QUÉ ES LO QUE TE CONSUME?', image:'assets/merch/afiche-que-te-consume.png', alt:'Afiche original con un torso abierto por una franja roja e hilos y la pregunta ¿Qué es lo que te consume?', detail:'Afiche original de la banda. Dejá que brote tu oscuridad.'},
     {id:'romperla', type:'Discos', name:'CD / A ROMPERLA TODA', image:'assets/merch/cd-a-romperla-toda.jpg', width:1334, height:1328, format:'disc', alt:'CD plateado intervenido con grietas negras y las frases A romperla toda y El odio en rojo.', detail:'A romperla toda. CD de la banda con su gráfica original intervenida.'},
-    {id:'cd', type:'Discos', name:'CD / EL ODIO EN FRANCÉS', image:'assets/merch/cd-el-odio.png', width:1210, height:1210, format:'disc', alt:'CD de El odio en francés con un ojo en blanco y negro y letras rojas alrededor del disco.', detail:'El sonido también tiene cuerpo. CD de la banda con su gráfica original.'},
   ];
   let category='Todos', selected='futuro', printOnly=false, discAngle=0, discDrag=null;
   const filtered=()=>products.filter(p=>category==='Todos'||p.type===category);
